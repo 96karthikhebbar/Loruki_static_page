@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* Resetting default box-sizing,padding,margin. By doing this we don't need to worry about the presets everytime */
+/* In first line we are setting box-sizing to border-box, by doing so we get rid of pre sets */
+/* default-padding is set to zero */
+/* default-margin is set to zero */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* configuring global font settings */
+/* setting deafult font-family to imported google-font Lato, sans-serif */
+/* setting default font color to cutom hexadecimal black color */
+/* setting default line height to 1.6 to make text look distictive */
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* removing bullet points in ul */
+ul {
+  list-style-type: none;
+}
+
+/* getting rid of text decorations like underlines for anchor tags*/
+/* chnging the anchor tag text Color */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* configuring or adiing custom styling to H1 and H2 elements */
+/* setting the font weight to 300 will make it look little bit a elegant for our lato font */
+/* adding line height of 1.2 would make our font distinctive */
+/* adding margin of 10px to top and bottom would avoid chances of our text looking squashed */
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+/* adiing the margin to top and bottom of paragraph so that they dont look squashed, we can easily distinguish between two paragraphs */
+p {
+  margin: 10px 0;
+}
+
+/* adding the width of 100% would keep the images within the container,It is to avoid the image overflow problem */
+image {
+  width: 100%;
+}
+
+/* Navbar Styling */
+/* background color of Navbar is set to custom hexadecimal blue */
+/* color of the text is set to white in order to give some contrast */
+/* IN Third Line we are going to set the navbar height,we can change as for the looks */
+.navbar {
+  background-color: #047aed;
+  color: #fff;
+  height: 70px;
+}
+
+/* .navbar ul selector applies the specified styles only to the ul element which is in the navbar class */
+/* display:flex; makes ul flex-box and elements inside it flex-items.It also positions items inside the ul-element horizontally(i.e By default flex-direction is row )  */
+.navbar ul {
+  display: flex;
+}
+
+/* .navbar a selector applies specified styles to the links(anchor tag) inside the navbar class */
+/* first we set the color of link to custom hexadecimal white i.e #fff */
+/* to break the links up a bit, we add a padding of 10px so that they look nice */
+/* we break them even further apart by adding margin of 5px to both left and right i.e margin:0 5px; */
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+/* .nav a:hover(:hover is a psuedo-class) is used to add a styling or special-effects to the links(anchor tag a) in the navbar-class whenver we hover over them */
+/* secod line of code adds a a solid white border of 2px to the bottom of the Links in the the navbar-class whenever we hover over them */
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+/* .navbar .flex (space between .navbar and .flex is very important.if the space is not given, styling won't owrk properly) condition specifies that if the flex is in the navbar applies the styles specified in this section*/
+/* justify-content: space-between; takes all the available space and puts it between the flex items(elements).Here space-between puts the avialable space between the h1-element(first flex-item) and nav-element(second flex-item)so they are placed at the right and left end of the container respectively. */
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* setting the maximum width(Horizontally) of our container(logo and the content) to 1100px, so that if we go beyond the specified width,the container(logo and contents) won't strech beyond that 1100px mark. */
+/* positioning the container(i.e our logo and contents) to the middle(horizontally) using margin auto on both left and right */
+/* getting rid-off top space which comes because of margin:10px 0;(margin-top:10p;margin-bottom:10px) set in H1 section. It's done by adding an overflow property to it, and setting it to zero   */
+/* adding little bit of padding(i.e 40px) to right and left, so that our content and logo wont sit attached to left or right border even when the screen width is lesser than specified width(i.e 1100px)  */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+/* here we position our anchcor text/link(i.e nav content) horizontally by using flebox and adding utility class flex to our container so that our positioning won't override previous container styling */
+/* display:flex(default flex-direction is row, flex-direction:row;) truns our container into a flex column and elements inside the container with utility class flex to a flex-items, i.e h1-element(first flex item) and nav-element(the second flex item) kept side by side  */
+/* justify-content:center; positions the elements to center along the flex-direction(i.e horizontally/paralally if flex-direction:row; , vertically/perpendicularly if flex-direction:column */
+/* align-items:center; positions the elements to center across the flex-direction(i.e vertically/perpendicularly if flex-direction:row; , horizontally/paralally if flex-direction:column */
+/* setting the height of the container to 100% of whatever the parent container height is */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
